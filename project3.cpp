@@ -16,7 +16,7 @@ LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 	KBDLLHOOKSTRUCT* pKeyboard = (KBDLLHOOKSTRUCT*)lParam;
 	if (nCode == HC_ACTION && wParam == WM_KEYDOWN) 
 	{
-		cout << pKeyboard->scanCode<<endl;	
+			
 		if (pKeyboard->scanCode == 1)//ESC
 		{
 			printf("ESC \n");
