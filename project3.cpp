@@ -67,9 +67,9 @@ LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 		}
 		else if (pKeyboard->scanCode == 29)//Ctrl
 		{
-			printf("LCtrl \n");
+			printf("Ctrl \n");
 
-			printf("LCtrl is pressed\n");
+			printf("Ctrl is pressed\n");
 		}
 		else if (pKeyboard->scanCode == 39)//;
 		{
