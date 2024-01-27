@@ -1,10 +1,10 @@
-// project3.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// KeyBoard driver for Windows
 
-using namespace std;
+
 #include <windows.h>
 #include<cstdio>
-using namespace std;
-#include <iostream>
+
+
 
 
 
@@ -16,10 +16,11 @@ LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 	KBDLLHOOKSTRUCT* pKeyboard = (KBDLLHOOKSTRUCT*)lParam;
 	if (nCode == HC_ACTION && wParam == WM_KEYDOWN) 
 	{
-			
+		//printf("%d", pKeyboard->scanCode );
 		if (pKeyboard->scanCode == 1)//ESC
 		{
 			printf("ESC \n");
+			
 			
 			printf("ESC is pressed\n");
 		}
@@ -97,14 +98,21 @@ LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 
 			printf("LShift is pressed\n");
 		}
-		/*
-		else if (pKeyboard->scanCode == 42)//\
-		{
-			printf("\ \n");
 
-			printf("\ is pressed\n");
+		else if (pKeyboard->scanCode == 42)//LShift
+		{
+			printf("LShift \n");
+
+			printf("LShift is pressed\n");
 		}
-		*/
+		else if (pKeyboard->scanCode == 43)// 
+		{
+			printf("\\ \n");
+
+			printf("\\ is pressed\n");
+		}
+
+		
 
 		else if (pKeyboard->scanCode == 51)//,
 		{
